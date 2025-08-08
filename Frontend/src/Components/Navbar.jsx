@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 import RegPopUp from "./RegPopUp";
+import { AppContext } from "../Context/Contextfirst";
 
 const Navbar = () => {
+  const { registerPopup, setregisterPopup } = useContext(AppContext);
+
   return (
     <>
       {/* PopUps */}
-      <RegPopUp />
+      {registerPopup && <RegPopUp />}
+
       {/* Navbar Navigations */}
       <div className="container mx-auto p-4 flex justify-between items-center">
         <img src="/svgs/logo.svg" alt="Logo" />
@@ -30,7 +34,10 @@ const Navbar = () => {
             Sign in
           </li>
           <li className="flex  items-center    justify-center">
-            <button className="outline font-bold py-2 px-4 rounded hover:bg-black hover:text-white text-sm">
+            <button
+              onClick={() => setregisterPopup(true)}
+              className="outline font-bold py-2 px-4 rounded hover:bg-black hover:text-white text-sm"
+            >
               Join
             </button>
           </li>

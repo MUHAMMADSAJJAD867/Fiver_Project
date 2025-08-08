@@ -13,6 +13,10 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, "Please Enter all the Value"],
     },
+    OTP: {
+      type: String,
+      default: false,
+    },
   },
   { timestamps: [true, "Please Enter all the Value"] }
 );

@@ -8,12 +8,10 @@ const PopupRegistration = () => {
 
   return (
     <>
-      <form
-        className=" bg-white flex flex-col    justify-start items-center"
-        action=""
-      >
+      <div className="h-[30px]"></div>
+
+      <div className=" bg-white flex flex-col justify-between items-center h-full">
         {/* Space Bar */}
-        <div className="h-[30px]"></div>
         <div className="w-full">
           {/* Create a new Account */}
           <div className="h2 text-xl mb-10">
@@ -86,7 +84,24 @@ const PopupRegistration = () => {
             </button>
           </div>
         </div>
-      </form>
+        {/* Terms of Conditions */}
+        <div className="">
+          <p className="text-[13px]">
+            By joining, you agree to the Fiverr{" "}
+            <a href="#" className="underline text-green-600">
+              Terms of Service
+            </a>{" "}
+            and to occasionally receive emails from us. Please read our{" "}
+            <a href="#" className="underline text-green-600">
+              Privacy
+            </a>{" "}
+            <a href="#" className="underline text-green-600">
+              Policy
+            </a>
+            to learn how we use your personal data.
+          </p>
+        </div>
+      </div>
     </>
   );
 };

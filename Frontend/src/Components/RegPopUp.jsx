@@ -23,23 +23,6 @@ const RegPopUp = () => {
               {/* form start */}
               {email ? <PopupEmail /> : <PopupRegistration />}
               {/* from end */}
-              {/* Terms of Conditions */}
-              <div className="">
-                <p className="text-[13px]">
-                  By joining, you agree to the Fiverr{" "}
-                  <a href="#" className="underline text-green-600">
-                    Terms of Service
-                  </a>{" "}
-                  and to occasionally receive emails from us. Please read our{" "}
-                  <a href="#" className="underline text-green-600">
-                    Privacy
-                  </a>{" "}
-                  <a href="#" className="underline text-green-600">
-                    Policy
-                  </a>
-                  to learn how we use your personal data.
-                </p>
-              </div>
             </div>
           </div>
         </div>
